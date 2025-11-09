@@ -1,5 +1,5 @@
 class Solution {
-    void rec(vector<string>&ans,int i,int depth,int n,string curr){
+    void rec(vector<string>&ans,int i,int depth,int n,string &curr){
         if(depth<0) return;
              if(i==2*n){
                 if(depth==0){
