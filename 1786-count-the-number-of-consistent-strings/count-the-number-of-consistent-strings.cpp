@@ -6,9 +6,9 @@ public:
             mpp[it]++;
         }
         int cnt = 0;
-        for(auto s : words){
+        for(auto & s : words){
             bool flag = true;
-            for(auto b : s){
+            for(auto &b : s){
                 if(mpp.find(b)==mpp.end()){
                     flag = false;
                 }
