@@ -23,9 +23,7 @@ class Solution {
     }
 public:
     bool evaluateTree(TreeNode* root) {
-        if(!root->left && !root->right){
-            return root->val;
-        } 
+         
         return solve(root);
     }
 };
