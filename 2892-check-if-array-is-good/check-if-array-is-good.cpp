@@ -3,14 +3,12 @@ public:
     bool isGood(vector<int>& nums) {
         int n = nums.size();
         int maxi = *max_element(nums.begin(),nums.end());
-        if(nums.size()!=maxi+1) return false;
-         unordered_map<int,int>mpp;
-         for(auto it : nums) mpp[it]++;
-         for(auto it : mpp){
-            if(it.first!=maxi && it.second!=1) return false;
-            if(it.first==maxi && it.second!=2) return false;
-         }
-         return true;
- 
+        if(n!=maxi+1) return false;
+        sort(nums.begin(),nums.end());
+       for(int i=0;i<n-1;i++){
+        if(nums[i]!=i+1) return false;
+       } 
+       if(nums[n-1]==maxi && nums[n-2]==maxi) return true;
+       return false;
     }
 };
